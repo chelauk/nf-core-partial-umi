@@ -97,7 +97,7 @@ def extract_bam(tsvFile) {
             meta.gender  = row[1]
             meta.status  = return_status(row[2].toInteger())
             meta.sample  = row[3]
-            meta.id      = meta.sample
+            meta.id      = "${meta.patient}-${meta.sample}"
             def bam      = return_file(row[4])
             if (!has_extension(bam, "bam")) exit 1, "File: ${bam} has the wrong extension. See --help for more information"
             return [meta, bam]
