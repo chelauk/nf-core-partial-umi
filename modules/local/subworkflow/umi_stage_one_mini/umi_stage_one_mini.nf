@@ -11,6 +11,9 @@ include { FILTER_CONSENSUS }           from '../../software/fgbio/filter_consens
 workflow UMI_STAGE_ONE_MINI {
     take:
     input_samples
+    fasta
+    fasta_fai
+    dict
 
     main:
     FGBIO_SORT_BAM(input_samples)

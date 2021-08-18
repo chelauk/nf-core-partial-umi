@@ -104,6 +104,6 @@ include { UMI_STAGE_ONE_MINI } from './modules/local/subworkflow/umi_stage_one_m
 workflow {
 
     if ( params.stage == 'mini' ) { bam_grouped_by_umi = input_samples }
-    UMI_STAGE_ONE_MINI(bam_grouped_by_umi)
+    UMI_STAGE_ONE_MINI(bam_grouped_by_umi,fasta, fasta_fai, dict)
 
 }
