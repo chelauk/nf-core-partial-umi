@@ -14,6 +14,7 @@ workflow UMI_STAGE_ONE_MINI {
     fasta
     fasta_fai
     dict
+    min_reads
 
     main:
     FGBIO_SORT_BAM(input_samples)
